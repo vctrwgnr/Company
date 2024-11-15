@@ -1,0 +1,15 @@
+2024-11-11 15:14:10 TypeError: Rental::insert(): Argument #3 ($startDate) must be of type string, null given, called in C:\xampp\htdocs\company-de\controllers\InsertController.php on line 26 and defined in C:\xampp\htdocs\company-de\classes\Rental.php:152
+Stack trace:
+#0 C:\xampp\htdocs\company-de\controllers\InsertController.php(26): Rental->insert('12', '1', NULL, NULL)
+#1 C:\xampp\htdocs\company-de\index.php(49): InsertController->invoke(Array, Array)
+#2 {main}
+2024-11-11 08:38:36 PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\company-de\classes\Db.php:17
+Stack trace:
+#0 C:\xampp\htdocs\company-de\classes\Db.php(17): PDO->__construct('mysql:dbname=fi...', 'root', Object(SensitiveParameterValue))
+#1 C:\xampp\htdocs\company-de\classes\Employee.php(91): Db::getConnection()
+#2 C:\xampp\htdocs\company-de\classes\TableHelper.php(13): Employee->getAllAsObjects()
+#3 C:\xampp\htdocs\company-de\controllers\ShowTableController.php(16): TableHelper::getAllObjectsByArea('employee')
+#4 C:\xampp\htdocs\company-de\index.php(49): showTableController->invoke(Array, Array)
+#5 {main}
+
+
